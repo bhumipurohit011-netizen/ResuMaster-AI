@@ -7,35 +7,46 @@ It combines Resume Intelligence + AI + Career Assistance into one platform desig
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 🚀 Features
-📄 AI Resume Analysis — Generate ATS scores, strengths, weaknesses, and improvement suggestions.
-🎯 Job Matching — Compare resumes with job descriptions and identify skill gaps.
-✍️ AI Resume Rewriting — Generate professional and ATS-friendly resume content.
-🤖 Career AI Chatbot — Get career, interview, skill, project, and job-search guidance using Groq AI.
-🔐 Authentication — Secure user authentication using Supabase.
+
+## 🚀 Features
+
+- 📄 **AI Resume Analysis** — Generate ATS scores, strengths, weaknesses, and improvement suggestions.
+- 🎯 **Job Matching** — Compare resumes with job descriptions and identify skill gaps.
+- ✍️ **AI Resume Rewriting** — Generate professional and ATS-friendly resume content.
+- 🤖 **Career AI Chatbot** — Get career, interview, skill, project, and job-search guidance using Groq AI.
+- 🔐 **Authentication** — Secure user authentication using Supabase.
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 🧩 Architecture User
-                ┌──────────────┐
+  
+  ## 🧩 System Architecture
+
+```text
+┌──────────────┐
 │     USER     │
 └──────┬───────┘
-       ↓
+       │
+       ▼
 ┌──────────────────┐
 │  REACT FRONTEND  │
 └────────┬─────────┘
-         ↓
+         │
+         ▼
 ┌──────────────────┐
 │ NODE.JS + EXPRESS│
 └──────┬─────┬─────┘
-       ↓     ↓
+       │     │
+       ▼     ▼
 ┌──────────┐ ┌──────────┐
 │ GEMINI AI│ │  GROQ AI │
-└──────────┘ └──────────┘
-       │     │
-       └──┬──┘
-          ↓
-┌──────────────────┐
-│     SUPABASE     │
-└──────────────────┘
+└─────┬────┘ └────┬─────┘
+      │            │
+      └──────┬─────┘
+             ▼
+      ┌──────────────┐
+      │   SUPABASE   │
+      └──────────────┘
+```
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 🔄 Application Workflow
 
@@ -101,75 +112,129 @@ ________________________________________________________________________________
 ├── .env                
 ├── .gitignore         
 └── README.md           
-
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 ⚙️ Installation
-Clone Repository
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
 git clone https://github.com/bhumipurohit011-netizen/ResuMaster-AI.git
 cd ResuMaster-AI
-Install Dependencies
+```
+
+### Install Dependencies
+
+```bash
 npm install
-Configure Environment Variables
+```
 
-Create a .env file in the project root:
+### Configure Environment Variables
 
+Create a `.env` file in the project root:
+
+```env
 GROQ_API_KEY=your_groq_api_key
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-Run Locally
+```
+
+### Run Locally
+
+```bash
 npm run dev
+```
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 🛠️ Technologies Used
-1.Frontend :-
-React, TypeScript, Vite, CSS
-2.Backend
-Node.js, Express.js
-3.AI
-Groq AI
-4.Database
-Supabase PostgreSQ
-5.File Processing
-PDF & DOCX
+
+## 🛠️ Technologies Used
+
+### 1. Frontend
+- React
+- TypeScript
+- Vite
+- CSS
+
+### 2. Backend
+- Node.js
+- Express.js
+
+### 3. AI
+- Gemini AI
+- Groq AI
+
+### 4. Database
+- Supabase
+- PostgreSQL
+
+### 5. File Processing
+- PDF
+- DOCX
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 🎯 Use Cases
-Resume improvement
-ATS optimization
-Job matching
-Career planning
-Interview preparation
-Skill-gap identification
-AI-powered career assistance
+## 🎯 Use Cases
+
+- Resume Improvement
+- ATS Optimization
+- Job Matching
+- Career Planning
+- Interview Preparation
+- Skill-Gap Identification
+- AI-Powered Career Assistance
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 🔮 Future Improvements
-🎤 AI mock interviews
-🗣️ Voice-based career assistant
-💼 Automated job recommendations
-📚 Personalized learning paths
-🔗 LinkedIn profile optimization
-📊 Career analytics dashboard
+## 🔮 Future Improvements
+
+- 🎤 **AI Mock Interviews**
+- 🗣️ **Voice-Based Career Assistant**
+- 💼 **Automated Job Recommendations**
+- 📚 **Personalized Learning Paths**
+- 🔗 **LinkedIn Profile Optimization**
+- 📊 **Career Analytics Dashboard**
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 🌐 Deployment
 
-The application can be deployed on Render or other Node.js-compatible hosting platforms.
+## 🌐 Deployment
 
-GitHub
-   │
-   ▼
-Render
-   │
-   ▼
-ResuMaster AI
-   │
-   ├──► Groq AI
-   └──► Supabase
+The application is deployed on **Render**.
+
+### Deployment Flow
+
+```text
+┌──────────────────┐
+│      GitHub      │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│      Render      │
+└────────┬─────────┘
+         │
+         ▼
+┌──────────────────┐
+│  ResuMaster AI   │
+└───────┬────┬─────┘
+        │    │
+        ▼    ▼
+┌──────────┐ ┌──────────┐
+│ Gemini AI│ │  Groq AI │
+└──────────┘ └────┬─────┘
+                  │
+                  ▼
+           ┌──────────────┐
+           │   Supabase   │
+           └──────────────┘
+```
 
    _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
