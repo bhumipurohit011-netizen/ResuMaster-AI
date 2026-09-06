@@ -1,0 +1,6 @@
+{
+  "name": "ResuMaster AI",
+  "description": "AI Resume Analyzer & Career Guidance System. Build a stronger resume, analyze ATS compatibility, identify skill gaps, and get personalized career advice.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
